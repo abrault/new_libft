@@ -6,7 +6,7 @@
 #    By: abrault <abrault@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/03/03 17:17:13 by abrault           #+#    #+#              #
-#    Updated: 2014/03/04 16:39:38 by abrault          ###   ########.fr        #
+#    Updated: 2014/03/10 13:55:35 by abrault          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC = src/ft_new_str.c \
 	  src/ft_fustr.c \
 	  src/ft_strcmp.c \
 	  src/ft_strncmp.c \
+	  src/ft_atoi.c \
 	  src/get_next_line.c
 
 OBJ = $(SRC:.c=.o)

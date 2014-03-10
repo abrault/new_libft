@@ -6,7 +6,7 @@
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/03 16:47:20 by abrault           #+#    #+#             */
-/*   Updated: 2014/03/05 18:35:00 by abrault          ###   ########.fr       */
+/*   Updated: 2014/03/10 13:53:39 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int		ft_strlen(const char *str);
 int		ft_strcmp(const char *str1, const char *str2);
 int		ft_strncmp(const char *str1, const char *str2, int n);
 int		get_next_line(int fd, char **line);
+int		ft_atoi(const char *str);
 
 char	*ft_new_str(int n);
 char	*ft_strchr(const char *str, char c);
