@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strtok.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/03 17:32:54 by abrault           #+#    #+#             */
-/*   Updated: 2014/03/03 18:16:30 by abrault          ###   ########.fr       */
+/*   Created: 2014/01/12 14:35:48 by abrault           #+#    #+#             */
+/*   Updated: 2014/03/18 15:46:49 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "includes/libft.h"
+#include <libft.h>
+#include <stdlib.h>
 
-int		main(int ac, char **av)
+char	*ft_strtok(char *str, char sepa)
 {
-	(void)ac;
-	(void)av;
+	static char	*stock = NULL;
+	char		*ptr;
+	int			i;
 
-	ft_putstr(ft_fustr("Bonjour", " comment ca va?"));
-	return (0);
+	i = 0;
+	ptr = NULL;
+	if (str != NULL)
+		stock = ft_strdup(str);
+	while (*stock != '\0')
+	{
+		if (i == 0 && *stock != sepa)
+		{
+			i = 1;
+			ptr = stock;
+		}
+		else if (i == 1 && *stock == sepa)
+		{
+			*stock = '\0';
+			stock += 1;
+			break ;
+		}
+		stock++;
+	}
+	return (ptr);
 }
